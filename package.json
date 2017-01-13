@@ -1,0 +1,87 @@
+{
+  "name": "nvd3-chart",
+  "version": "0.1.0",
+  "description": "nvd3-chart angular2 component",
+  "homepage": "https://github.com/wwwdevio/nvd3-chart#readme",
+  "contributors": [
+    "Ścibor Rudnicki <scibor.rudnicki@wwwdev.io>"
+  ],
+  "author": "Ścibor Rudnicki <scibor.rudnicki@wwwdev.io> (http://wwdev.io)",
+  "main": "build/index.js",
+  "typings": "build/index.d.ts",
+  "scripts": {
+    "clean": "rimraf ./build",
+    "build": "npm run clean && webpack --progress --display-error-details --config webpack/webpack.config.js && npm run html && tsc",
+    "html": "copyfiles -f src/*.html src/*.scss build/",
+    "start": "npm install && npm run build && npm pack",
+    "test": "./node_modules/karma/bin/karma start karma.config.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@angular/core": "^2.4.2",
+    "@types/core-js": "^0.9.35",
+    "@types/node": "^7.0.0",
+    "@types/nvd3": "^1.8.33",
+    "core-js": "^2.4.1",
+    "d3": "^3.5.17",
+    "nvd3": "^1.8.5",
+    "remove": "^0.1.5"
+  },
+  "devDependencies": {
+    "@angular/common": "^2.4.2",
+    "@angular/compiler": "^2.4.2",
+    "@angular/platform-browser": "^2.4.2",
+    "@angular/platform-browser-dynamic": "^2.4.2",
+    "@types/angular2": "0.0.2",
+    "@types/jasmine": "^2.5.38",
+    "@types/webpack": "^2.1.0",
+    "angular2-template-loader": "^0.6.0",
+    "awesome-typescript-loader": "^3.0.0-beta.18",
+    "copyfiles": "^1.0.0",
+    "css-loader": "^0.26.1",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.4",
+    "html-webpack-plugin": "^2.26.0",
+    "jasmine": "^2.5.2",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-scss-preprocessor": "^2.0.0",
+    "karma-webpack": "^1.8.1",
+    "node-sass": "^4.2.0",
+    "path": "^0.12.7",
+    "raw-loader": "^0.5.1",
+    "reflect-metadata": "^0.1.9",
+    "resolve-url": "^0.2.1",
+    "rimraf": "^2.5.4",
+    "rxjs": "^5.0.3",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "to-string-loader": "^1.1.5",
+    "ts-helpers": "^1.1.2",
+    "ts-loader": "^1.3.3",
+    "typescript": "~2.0.10",
+    "webpack": "^2.2.0-rc.3",
+    "zone.js": "^0.7.4"
+  },
+  "keywords": [
+    "Angular2",
+    "Component",
+    "nvd3",
+    "d3",
+    "charts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wwwdevio/nvd3-chart.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wwwdevio/nvd3-chart/issues"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
