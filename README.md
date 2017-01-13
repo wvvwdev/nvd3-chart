@@ -7,17 +7,13 @@ nvd3-chart angular2 component
 [![GitHub stars](https://img.shields.io/github/stars/wwwdevio/nvd3-chart.svg)](https://github.com/wwwdevio/nvd3-chart/stargazers)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/wwwdevio/nvd3-chart/master/LICENSE)
 
-This is an example of module Meteor Application on angular2-now, Redux and Immutable with packages below.
-It consists clients and developers states where developers is created to help develop meteorApp and clients
-to manage todos or tasks.
-
 ## Table of contents
 * [Installation](#installation)
 * [Usage](#usage)
 * [Versioning](#versioning)
 * [Git commit](#git-commit)
-* [Licence](#licence)
-* [Donate](#donate)
+* [License](#license)
+
 
 ## Installation
 
@@ -208,4 +204,4 @@ How do I know when to release 1.0.0?
 
 ## License
 
-MIT © [wwwdev.io](scibor.rudnicki@wwwdev.io)
+MIT © [wwwdev.io](https://raw.githubusercontent.com/wwwdevio/nvd3-chart/master/LICENSE)
