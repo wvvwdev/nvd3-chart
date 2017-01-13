@@ -82,6 +82,8 @@
     "url": "https://github.com/wwwdevio/nvd3-chart/issues"
   },
   "directories": {
-    "test": "test"
+    "src": "src",
+    "test": "test",
+    "webpack": "webpack"
   }
 }
