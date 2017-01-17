@@ -20,7 +20,7 @@ nvd3-chart angular2 component
 To install this library, run:
 
 ```bash
-$ npm install nvd3-chart --save
+$ npm install nvd3 nvd3-chart --save
 ```
 
 ## Usage
