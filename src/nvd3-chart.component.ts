@@ -5,7 +5,7 @@ import * as nv from 'nvd3';
   selector: 'nvd3-chart',
   template: require('./nvd3-chart.component.html'),
   styles: [
-    require('./nvd3-chart.component.scss')
+    //require('./nvd3-chart.component.scss')
   ],
   encapsulation: ViewEncapsulation.None
 })
