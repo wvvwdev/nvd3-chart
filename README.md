@@ -32,13 +32,13 @@ import { NgModule } from '@angular/core';
 import { ChartComponent } from './chart.component';
 
 // Import nvd3-chart library
-import nvd3ChartComponent from 'nvd3-chart';
+import Nvd3ChartComponent from 'nvd3-chart';
 
 @NgModule({
   declarations: [
     ChartComponent,
-    // Specify nvd3ChartComponent library in declarations
-    nvd3ChartComponent
+    // Specify Nvd3ChartComponent library in declarations
+    Nvd3ChartComponent
   ],
   imports: [],
   providers: []
@@ -50,7 +50,7 @@ In your any component, in this example ./chart.component.ts
 
 ```typescript
 import { Component } from '@angular/core';
-import nvd3ChartComponent from 'nvd3-chart';
+import Nvd3ChartComponent from 'nvd3-chart';
 import * as nv from 'nvd3';
 
 @Component({
