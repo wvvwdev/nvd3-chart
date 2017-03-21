@@ -3,19 +3,19 @@ var path = require('path');
 
 module.exports = {
   entry: {
-    'main': `${__dirname}/../src/index.ts`
+    'main': './src/index.ts'
   },
 
   resolve: {
-    extensions: ['.ts','.js','.json','.css'],
+    extensions: ['.ts','.js'],
     modules: [
-      path.resolve(`${__dirname}/../`, 'node_modules'),
-      path.resolve(`${__dirname}/../`, 'src'),
+      path.resolve(__dirname, 'node_modules'),
+      // path.resolve(__dirname, 'src'),
     ]
   },
 
   output: {
-    path: path.resolve(`${__dirname}/../`, 'build'),
+    path: path.resolve(__dirname, 'dist'),
     library: 'nvd3-chart',
     libraryTarget: 'umd',
     filename: '[name].js'
@@ -26,26 +26,8 @@ module.exports = {
       {
         test: /\.ts$/,
         use: [
-          'awesome-typescript-loader',
-          'angular2-template-loader'
+          'awesome-typescript-loader'
         ]
-      },
-      {
-        test: /\.html$/,
-        use: 'raw-loader'
-      },
-      {
-        test: /\.(jpg|png|gif)$/,
-        use: 'file-loader'
-      },
-      {
-        test: /\.css$/,
-        use: ['to-string-loader', 'css-loader']
-      },
-      {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: ['raw-loader', 'sass-loader']
       }
     ]
   },
@@ -54,7 +36,7 @@ module.exports = {
     new webpack.ContextReplacementPlugin(
       // The (\\|\/) piece accounts for path separators in *nix and Windows
       /angular(\\|\/)core(\\|\/)src(\\|\/)linker/,
-      path.resolve(`${__dirname}/../`, 'src'),
+      path.resolve(__dirname, 'src'),
       {
         // your Angular Async Route paths relative to this root directory
       }
