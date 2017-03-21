@@ -1,22 +1,33 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
+    "baseUrl": "src",
+    "compileOnSave": false,
     "declaration": true,
-    "noImplicitAny": false,
-    "removeComments": true,
-    "preserveConstEnums": true,
-    "sourceMap": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "module": "commonjs",
     "moduleResolution": "node",
-    "outDir": "build"
+    "noImplicitAny": false,
+    "outDir": "dist",
+    "preserveConstEnums": true,
+    "sourceMap": false,
+    "target": "es5",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "lib": [
+      "es6", 
+      "dom"
+    ]
   },
-  "files": [
-    "src/index.ts"
+  "awesomeTypescriptLoaderOptions": {
+    "useWebpackText": true
+  },
+  "include": [
+    "src"
   ],
   "exclude": [
     "node_modules",
-    "build"
+    "**/*.spec.ts"
   ]
 }
