@@ -1,4 +1,4 @@
-//import 'es6-shim';
+// import 'es6-shim';
 require('reflect-metadata');
 require('core-js/es6');
 require('core-js/es7/reflect');
@@ -21,7 +21,7 @@ const browser = require('@angular/platform-browser-dynamic/testing');
 const testing = require('@angular/core/testing');
 
 testing.TestBed.initTestEnvironment(
-  browser.BrowserDynamicTestingModule, 
+  browser.BrowserDynamicTestingModule,
   browser.platformBrowserDynamicTesting()
 );
 Error.stackTraceLimit = Infinity;
