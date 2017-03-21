@@ -1,2 +1,3 @@
-import { nvd3ChartComponent } from './nvd3-chart.component';
-export default nvd3ChartComponent;
+
+import { Nvd3ChartComponent } from './nvd3-chart.component';
+export default Nvd3ChartComponent;
