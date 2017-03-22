@@ -13,8 +13,8 @@
     "noImplicitAny": true,
     "outDir": "dist",
     "preserveConstEnums": true,
-    "stripInternal": true, // avoid useless declarations for internal APIs
-    "skipLibCheck": true, // avoid being blocked by (harmless) errors in the librairies you use
+    "stripInternal": true,
+    "skipLibCheck": true,
     "sourceMap": true,
     "strictNullChecks": true,
     "target": "es5",
