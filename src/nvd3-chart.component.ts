@@ -13,13 +13,13 @@ import * as nv from 'nvd3';
 
 @Component({
   selector: 'nvd3-chart',
-  template: `<svg></svg>`,
+  template: require('./nvd3-chart.component.html'),
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Nvd3ChartComponent implements AfterViewInit {
   private el: any;
-  @Input() options;
+  @Input() options: any;
 
   constructor(@Inject(ElementRef) elementRef: ElementRef) {
     this.el = elementRef.nativeElement;
