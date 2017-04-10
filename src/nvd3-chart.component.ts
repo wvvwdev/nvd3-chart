@@ -11,9 +11,13 @@ import {
 import * as d3 from 'd3';
 import * as nv from 'nvd3';
 
+import template from './nvd3-chart.component.html';
+
 @Component({
   selector: 'nvd3-chart',
-  template: require('./nvd3-chart.component.html'),
+  template: `
+    <svg></svg>
+  `,
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
