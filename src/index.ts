@@ -7,4 +7,4 @@ export {
   Nvd3ChartModule,
 }
 
-export default Nvd3ChartComponent;
+export default Nvd3ChartModule;
