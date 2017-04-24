@@ -1,8 +1,10 @@
 # nvd3-chart
-nvd3-chart angular2 component
+nvd3-chart Angular 2+ Component
 
 [![GitHub version](https://badge.fury.io/gh/wwwdevio%2Fnvd3-chart.svg)](https://badge.fury.io/gh/wwwdevio%2Fnvd3-chart)
 [![GitHub issues](https://img.shields.io/github/issues/wwwdevio/nvd3-chart.svg)](https://github.com/wwwdevio/nvd3-chart/issues)
+[![Package Quality](http://npm.packagequality.com/shield/nvd3-chart.svg)](http://packagequality.com/#?package=nvd3-chart)
+[![Known Vulnerabilities](https://snyk.io/test/npm/nvd3-chart/badge.svg)](https://snyk.io/test/npm/nvd3-chart)
 [![GitHub forks](https://img.shields.io/github/forks/wwwdevio/nvd3-chart.svg)](https://github.com/wwwdevio/nvd3-chart/network)
 [![GitHub stars](https://img.shields.io/github/stars/wwwdevio/nvd3-chart.svg)](https://github.com/wwwdevio/nvd3-chart/stargazers)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/wwwdevio/nvd3-chart/master/LICENSE)
