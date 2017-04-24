@@ -1,7 +1,9 @@
 {
   "angularCompilerOptions": {
+    "genDir": "aot",
     "strictMetadataEmit": true,
-    "skipTemplateCodegen": true
+    "skipTemplateCodegen": true,
+    "skipMetadataEmit" : true
   },
   "compilerOptions": {
     "compileOnSave": false,
@@ -16,6 +18,7 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
     "target": "es5",
     "typeRoots": [
       "./node_modules/@types"
