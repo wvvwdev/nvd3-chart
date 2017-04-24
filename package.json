@@ -4,18 +4,21 @@
   "description": "nvd3-chart angular2 component",
   "author": "Ścibor Rudnicki <scibor.rudnicki@wwwdev.io> (http://wwdev.io)",
   "homepage": "https://github.com/wwwdevio/nvd3-chart#readme",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/bundle.umd.js",
+  "module": "dist/index.js",
+  "jsnext:main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "contributors": [
     "Ścibor Rudnicki <scibor.rudnicki@wwwdev.io>"
   ],
   "scripts": {
-    "copyfiles": "copyfiles -f src/*.html src/*.scss dist/",
-    "clean": "rimraf ./dist && rimraf ./node_modules",
-    "build:webpack": "webpack --progress --display-error-details --config webpack.config.js",
-    "build:tsc": "tsc",
-    "build": "npm run build:tsc",
-    "start": "npm run clean && npm install && npm run build && npm run copyfiles && npm pack",
+    "clean": "rimraf ./dist",
+    "bundle": "rollup -c",
+    "prebuild": "npm run clean",
+    "build": "./node_modules/.bin/ngc",
+    "postbuild": "npm run bundle",
+    "prepublish": "npm run build",
+    "start": "npm run build",
     "test": "./node_modules/karma/bin/karma start karma.conf.js"
   },
   "license": "MIT",
@@ -24,21 +27,17 @@
     "nvd3": "^1.8.5"
   },
   "devDependencies": {
-    "@angular/common": "^4.0.0-rc.5",
-    "@angular/compiler": "^4.0.0-rc.5",
-    "@angular/core": "^4.0.0-rc.5",
-    "@angular/platform-browser": "^4.0.0-rc.5",
-    "@angular/platform-browser-dynamic": "^4.0.0-rc.5",
-    "@types/core-js": "^0.9.35",
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/compiler-cli": "^4.0.1",
+    "@angular/core": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
     "@types/jasmine": "^2.5.46",
     "@types/karma": "^0.13.34",
     "@types/node": "^7.0.8",
     "@types/nvd3": "^1.8.36",
-    "@types/reflect-metadata": "0.0.5",
-    "@types/webpack": "^2.2.11",
-    "awesome-typescript-loader": "^3.1.2",
     "codelyzer": "^3.0.0-beta.4",
-    "copyfiles": "^1.2.0",
     "core-js": "^2.4.1",
     "jasmine": "^2.5.3",
     "jasmine-core": "^2.5.2",
@@ -50,11 +49,10 @@
     "karma-webpack": "^2.0.3",
     "reflect-metadata": "^0.1.10",
     "rimraf": "^2.6.1",
+    "rollup": "^0.41.6",
     "rxjs": "^5.2.0",
-    "ts-helpers": "^1.1.2",
     "tslint": "^4.5.1",
-    "typescript": "^2.2.1",
-    "webpack": "^2.2.1",
+    "typescript": "^2.1.0",
     "zone.js": "^0.8.5"
   },
   "keywords": [
@@ -70,10 +68,5 @@
   },
   "bugs": {
     "url": "https://github.com/wwwdevio/nvd3-chart/issues"
-  },
-  "directories": {
-    "src": "src",
-    "test": "test",
-    "webpack": "webpack"
   }
 }
